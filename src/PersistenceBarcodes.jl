@@ -1,5 +1,15 @@
 module PersistenceBarcodes
 
-# package code goes here
+using StaticArrays
+using RecipesBase
+using DocStringExtensions
 
-end # module
+include("barcode.jl")
+include("plotting.jl")
+
+export
+    PersistencePair, birth, death, data,
+    PersistenceBarcode, dim, barcodes,
+    persistencediagram, persistencediagram!
+
+end
