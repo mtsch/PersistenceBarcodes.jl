@@ -2,7 +2,6 @@ module PersistenceBarcodes
 
 using StaticArrays
 using RecipesBase
-using DocStringExtensions
 
 include("barcode.jl")
 include("plotting.jl")

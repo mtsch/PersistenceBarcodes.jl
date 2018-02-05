@@ -1,10 +1,9 @@
 # PersistenceBarcodes
 
 [![Build Status](https://travis-ci.org/mtsch/PersistenceBarcodes.jl.svg?branch=master)](https://travis-ci.org/mtsch/PersistenceBarcodes.jl)
-[![Build status](https://ci.appveyor.com/api/projects/status/le4fbrk5hsgnf3ax?svg=true)](https://ci.appveyor.com/project/mtsch/persistencebarcodes-jl)
+[![Build status](https://ci.appveyor.com/api/projects/status/5k1shayhn6lhe6g7?svg=true)](https://ci.appveyor.com/project/mtsch/persistencebarcodes-jl)
 [![Coverage Status](https://coveralls.io/repos/mtsch/PersistenceBarcodes.jl/badge.svg?branch=master&service=github)](https://coveralls.io/github/mtsch/PersistenceBarcodes.jl?branch=master)
 [![codecov.io](http://codecov.io/github/mtsch/PersistenceBarcodes.jl/coverage.svg?branch=master)](http://codecov.io/github/mtsch/PersistenceBarcodes.jl?branch=master)
-
 
 Simple persistence barcode package for Julia. Currently only used for pretty
 printing and plotting.
@@ -15,7 +14,6 @@ To install this package, run:
 
 ```
 Pkg.clone("https://github.com/mtsch/PersistenceBarcodes.jl")
-Pkg.build("https://github.com/mtsch/PersistenceBarcodes.jl")
 ```
 
 ## Usage

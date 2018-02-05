@@ -1,6 +1,5 @@
-# PersistencePair
 """
-`PersistencePair{T, U}`
+    PersistencePair{T, U}
 
 fields:
 
@@ -34,21 +33,21 @@ function Base.show(io::IO, pair::PersistencePair{T, U}) where {T, U}
 end
 
 """
-$(SIGNATURES)
+    birth(pair)
 
-Get the birth time of the pair.
+Get the birth time of a `PersistencePair`.
 """
 birth(pair::PersistencePair) = pair.birth
 """
-$(SIGNATURES)
+    death(pair)
 
-Get the death time of the pair.
+Get the death time of a `PersistencePair`.
 """
 death(pair::PersistencePair) = pair.death
 """
-$(SIGNATURES)
+    data(pair)
 
-Get the data included in the pair.
+Get the data associated with a `PersistencePair`.
 """
 data(pair::PersistencePair) = pair.data
 
@@ -62,10 +61,8 @@ Base.next(pair::PersistencePair, i::Int) =
 Base.done(pair::PersistencePair, i::Int) = i == 3
 
 # ============================================================================ #
-
-# PersistenceBarcode -> več v enem?
 """
-`PersistenceBarcode{T, U, D, A<:AbstractVector{PersistencePair{T, U}}}`
+    PersistenceBarcode{T, U, D, A<:AbstractVector{PersistencePair{T, U}}}
 
 fields:
 
@@ -93,13 +90,6 @@ function PersistenceBarcode(arrs::Vararg{A, D}) where
     PersistenceBarcode{T, U, D, A}(SVector{D}([arrs...]))
 end
 
-#=
-function PersistenceBarcode(arr::A) where
-        A<:AbstractVector{PersistencePair{T, U}} where {T, U}
-    PersistenceBarcode{T, U, 1, A}(SVector{1}([arr]))
-end
-=#
-
 function Base.show(io::IO, barcode::PersistenceBarcode{T, U, D}) where {T, U, D}
     compact = get(io, :compact, false)
     if compact
@@ -125,9 +115,9 @@ function Base.:(==)(barcode1::PersistenceBarcode, barcode2::PersistenceBarcode)
 end
 
 """
-$(SIGNATURES)
+    dim(barcode)
 
-Get the dimension of the barcode.
+Get the dimension of a `PersistenceBarcode`.
 """
 dim(::PersistenceBarcode{T, U, D}) where {T, U, D} = D - 1
 
@@ -145,7 +135,6 @@ Base.iteratorsize(::PersistenceBarcode) = Base.HasLength()
 Base.iteratoreltype(barcode::PersistenceBarcode) = Base.HasEltype()
 Base.eltype(barcode::PersistenceBarcode{T, U, D, A}) where {T, U, D, A} = A
 
-# map, filter, etc.
 Base.filter(f, barcode::PersistenceBarcode) =
     PersistenceBarcode(map(b -> filter(f, b), barcode.barcodes))
 
