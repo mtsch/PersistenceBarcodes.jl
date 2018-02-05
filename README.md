@@ -9,6 +9,15 @@
 Simple persistence barcode package for Julia. Currently only used for pretty
 printing and plotting.
 
+## Installation
+
+To install this package, run:
+
+```
+Pkg.clone("https://github.com/mtsch/PersistenceBarcodes.jl")
+Pkg.build("https://github.com/mtsch/PersistenceBarcodes.jl")
+```
+
 ## Usage
 
 ```
@@ -51,10 +60,11 @@ A `PersistenceBarcode` is a wrapper for an array of arrays of
   `PersistencePair`, since the result is a `PersistenceBarcode`.
 * `filter(f, barcode)`: Like the `filter` function in Base.
 * `plot(barcode[, dims = 0:dim(barcode)])`: Plot the barcode. Only plot the dims
-  selected by the `dims` keyword argument. Requires `Plots.jl`.
+  selected by the `dims` keyword argument. Requires
+  [Plots.jl](https://github.com/JuliaPlots/Plots.jl).
 * `persistencediagram(barcode[, dims = 0:dim(barcode)])`: Plot as a persistence
   diagram. Only plot the dims selected by the `dims` keyword argument. Requires
-  `Plots.jl`.
+  [Plots.jl](https://github.com/JuliaPlots/Plots.jl).
 
 #### Example plots:
 
