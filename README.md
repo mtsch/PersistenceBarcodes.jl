@@ -19,11 +19,11 @@ A persistence pair stores the birth and death of a generator and optionally some
 data. The data can be used to store any additional information, for example the
 simplex that killed the generator.
 
-Constructor:
+#### Constructor:
 
 * `PersistencePair(birth, death, data::U = nothing)`
 
-Operations:
+#### Operations:
 
 * `birth(pair)`: Get the birth time of the pair.
 * `death(pair)`: Get the death time of the pair.
@@ -37,12 +37,12 @@ PersistenceBarcode{T, U}
 A `PersistenceBarcode` is a wrapper for an array of arrays of
 `PersistencePair`s.
 
-Constructors:
+#### Constructors:
 
 * PersistenceBarcode(arr::AbstractVector)
 * PersistenceBarcode(arrs::Vararg)
 
-Operations:
+#### Operations:
 
 * `dim(barcode)`: Get the dimension of the barcode (= `length(barcode) - 1`).
 * `barcode[d]`: Get the `d`-th dimension subdiagram (this indexing is
@@ -56,7 +56,7 @@ Operations:
   diagram. Only plot the dims selected by the `dims` keyword argument. Requires
   `Plots.jl`.
 
-Example plots:
+#### Example plots:
 
 ![Barcode plot](images/barcode.png)
 ![Diagram plot](images/diagram.png)
