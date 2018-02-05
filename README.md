@@ -58,8 +58,8 @@ Operations:
 
 Example plots:
 
-![Barcode plot]("images/barcode.png")
-![Diagram plot]("images/diagram.png")
+![Barcode plot](images/barcode.png)
+![Diagram plot](images/diagram.png)
 
 ## TODO
 
