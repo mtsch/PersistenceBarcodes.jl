@@ -151,5 +151,10 @@ using Suppressor
         @test_throws ArgumentError persistencediagram(barcode, dims = -1)
         @test_throws ArgumentError persistencediagram(barcode, [1,2,3])
         @test_throws ArgumentError persistencediagram([1,2,3])
+
+        # Empty plots
+        T = PersistencePair{Float64, Void}
+        @test plot(PersistenceBarcode(T[], T[]))               ≠ nothing
+        @test persistencediagram(PersistenceBarcode(T[], T[])) ≠ nothing
     end
 end

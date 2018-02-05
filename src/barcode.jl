@@ -82,7 +82,7 @@ end
 function PersistenceBarcode(arr::AbstractVector{A}) where
         A<:AbstractVector{PersistencePair{T, U}} where {T, U}
     D = length(arr)
-    PersistenceBarcode{T, U, D, A}(SVector{D}(arr))
+    PersistenceBarcode{T, U, D, A}(SVector{D, A}(arr))
 end
 
 function PersistenceBarcode(arrs::Vararg{A, D}) where

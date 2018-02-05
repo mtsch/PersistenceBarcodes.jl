@@ -1,6 +1,7 @@
 function getlastdeath(barcode::PersistenceBarcode{T}, dims) where T
-    lastdeath = typemin(T)
+    lastdeath = zero(T)
     for i in dims
+        isempty(barcode[i]) && continue
         lastdeath = max(lastdeath,
                         maximum(map(barcode[i]) do p
                                 d = death(p)
