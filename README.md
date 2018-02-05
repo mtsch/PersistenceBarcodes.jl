@@ -56,6 +56,11 @@ Operations:
   diagram. Only plot the dims selected by the `dims` keyword argument. Requires
   `Plots.jl`.
 
+Example plots:
+
+![Barcode plot]("images/barcode.png")
+![Diagram plot]("images/diagram.png")
+
 ## TODO
 
 * Implement bottleneck and Wasserstein metrics.
