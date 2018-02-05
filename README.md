@@ -20,9 +20,7 @@ Pkg.build("https://github.com/mtsch/PersistenceBarcodes.jl")
 
 ## Usage
 
-```
-PersistencePair{T, U}
-```
+### `PersistencePair`
 
 A persistence pair stores the birth and death of a generator and optionally some
 data. The data can be used to store any additional information, for example the
@@ -39,17 +37,15 @@ simplex that killed the generator.
 * `data(pair)`: Get the data associated with the pair.
 * `b, d = pair`: This works like with tuples.
 
-```
-PersistenceBarcode{T, U}
-```
+### `PersistenceBarcode`
 
 A `PersistenceBarcode` is a wrapper for an array of arrays of
 `PersistencePair`s.
 
 #### Constructors:
 
-* PersistenceBarcode(arr::AbstractVector)
-* PersistenceBarcode(arrs::Vararg)
+* `PersistenceBarcode(arr::AbstractVector)`
+* `PersistenceBarcode(arrs::Vararg)`
 
 #### Operations:
 
